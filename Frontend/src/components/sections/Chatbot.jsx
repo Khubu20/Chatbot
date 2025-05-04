@@ -74,12 +74,6 @@ const Chatbot = () => {
                 headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
                 body: new URLSearchParams({ MSG: input }),
             });
-        // try {
-        //     const response = await fetch('https://akf-7.onrender.com/send-msg', {
-        //         method: 'POST',
-        //         headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-        //         body: new URLSearchParams({ MSG: input }),
-        //     });
 
             const data = await response.json();
             const botResponse = data.Reply || "Sorry, I didn't understand that.";
@@ -162,7 +156,7 @@ const Chatbot = () => {
     };
 
     const resetChat = () => {
-        setMessages([{ type: 'bot', text: 'Hi! Ask me anything about Akshat.' }]);
+        setMessages([{ type: 'bot', text: 'Hi! Ask me anything about Khushboo.' }]);
     };
 
     const BotButton = styled.button`
@@ -175,7 +169,7 @@ const Chatbot = () => {
                 <div className="chatbot-container">
                     <div className="chatbox">
                         <div className="chatbox-header">
-                            🐼 Kaleshi's Virtual Assistant
+                            🐼 Khushboo's Virtual Assistant
                             <button onClick={resetChat} className="refresh-chatbot-btn">🔄</button>
                             <button onClick={() => setChatbotOpen(false)} className="close-chatbot-btn">❌</button>
                         </div>
