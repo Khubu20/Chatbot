@@ -69,11 +69,17 @@ const Chatbot = () => {
         setLoading(true);
 
         try {
-            const response = await fetch('https://akf-7.onrender.com/send-msg', {
+            const response = await fetch('https://chatbot-1-r30r.onrender.com', {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
                 body: new URLSearchParams({ MSG: input }),
             });
+        // try {
+        //     const response = await fetch('https://akf-7.onrender.com/send-msg', {
+        //         method: 'POST',
+        //         headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+        //         body: new URLSearchParams({ MSG: input }),
+        //     });
 
             const data = await response.json();
             const botResponse = data.Reply || "Sorry, I didn't understand that.";
